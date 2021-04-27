@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: RAW_DATA
+    database: ANALYTICS
+    tables:
+      - name: CUSTOMER
+        columns:
+          - name: C_CUSTOMER_ID
+
+      - name: PROMOTION
+        columns:
+          - name: P_PROMO_ID
+
+      - name: TIME_DIM
+        columns:
+          - name: T_TIME_ID
+
+      - name: DATE_DIM
+        columns:
+          - name: D_DATE_ID                    

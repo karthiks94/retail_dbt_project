@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_customer
+    description: Staged customer data from our retail project app
+    columns: 
+      - name: C_CUSTOMER_ID
+        description: The primary key for customer.
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_promotion
+    description: Staged promotion data from our retail project app
+    columns: 
+      - name: P_PROMO_ID
+        description: The primary key for promotion.
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_date_dim
+    description: Staged date_dim data from our retail project app
+    columns: 
+      - name: D_DATE_ID
+        description: The primary key for date_dim.
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_time_dim
+    description: Staged time_dim data from our retail project app
+    columns: 
+      - name: T_TIME_ID
+        description: The primary key for time_dim.
+        tests:
+          - unique
+          - not_null

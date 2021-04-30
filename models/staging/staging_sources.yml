@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: RAW_DATA
+    database: ANALYTICS
+    tables:
+      - name: TIME_DIM
+        columns:
+          - name: T_TIME_ID
+
+      - name: DATE_DIM
+        columns:
+          - name: D_DATE_ID                    

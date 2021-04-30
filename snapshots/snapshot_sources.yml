@@ -11,11 +11,3 @@ sources:
       - name: PROMOTION
         columns:
           - name: P_PROMO_ID
-
-      - name: TIME_DIM
-        columns:
-          - name: T_TIME_ID
-
-      - name: DATE_DIM
-        columns:
-          - name: D_DATE_ID                    

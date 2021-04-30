@@ -1,5 +1,6 @@
-{%- set schema_name = 'RAW_DATA' -%}
-{%- set table_name = 'CUSTOMER' -%}
+{%- set reference_object = 'customer_snapshot' -%}
+{%- set schema_name = 'RAW_DATA_SNAPSHOT' -%}
+{%- set table_name = reference_object.upper() -%}
 {# primary_key_cols should not have spaces after comma. Eg - 'col_1, col_2' #}
 {%- set primary_key_cols = 'C_CUSTOMER_ID' -%}
 {%- set primary_key_cols_list = primary_key_cols.split(",") -%}
@@ -12,7 +13,7 @@ with customer as (
                 *,
                 MD5 ({{ md5_construct }}) as MD5_HASH,
                 CURRENT_TIMESTAMP as LAST_LOAD_TS 
-        FROM {{ source(schema_name, table_name) }}
+        FROM {{ ref(reference_object) }}
 
 )
 

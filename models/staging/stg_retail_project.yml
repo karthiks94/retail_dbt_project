@@ -4,7 +4,7 @@ models:
   - name: stg_customer
     description: Staged customer data from our retail project app
     columns: 
-      - name: C_CUSTOMER_ID
+      - name: C_CUSTOMER_SK
         description: The primary key for customer.
         tests:
           - unique
@@ -13,7 +13,7 @@ models:
   - name: stg_promotion
     description: Staged promotion data from our retail project app
     columns: 
-      - name: P_PROMO_ID
+      - name: P_PROMO_SK
         description: The primary key for promotion.
         tests:
           - unique

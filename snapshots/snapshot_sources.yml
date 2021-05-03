@@ -7,7 +7,71 @@ sources:
       - name: CUSTOMER
         columns:
           - name: C_CUSTOMER_ID
+            description: Primary key of the customer table
+            tests:
+              - unique
+              - not_null
+
+      - name: CUSTOMER_ADDRESS
+        columns:
+          - name: CA_ADDRESS_ID
+            description: Primary key of the customer address table
+            tests:
+              - unique
+              - not_null
+
+      - name: CUSTOMER_DEMOGRAPHICS
+        columns:
+          - name: CD_DEMO_ID
+
+      - name: HOUSEHOLD_DEMOGRAPHICS
+        columns:
+          - name: HD_DEMO_ID
+
+      - name: INCOME_BAND
+        columns:
+          - name: IB_INCOME_BAND_ID
+
+      - name: INVENTORY
+        columns:
+          - name: INV_ITEM_ID
+
+      - name: ITEM
+        columns:
+          - name: I_ITEM_ID
+
+      - name: ITEM_BRAND
+        columns:
+          - name: I_ITEM_ID
+
+      - name: ITEM_CATEGORY
+        columns:
+          - name: I_ITEM_ID
+
+      - name: ITEM_CLASS
+        columns:
+          - name: I_ITEM_ID
+
+      - name: ITEM_MANUFACT
+        columns:
+          - name: I_ITEM_ID
 
       - name: PROMOTION
         columns:
           - name: P_PROMO_ID
+
+      - name: STORE
+        columns:
+          - name: S_STORE_ID
+
+      - name: STORE_MARKET
+        columns:
+          - name: S_STORE_ID
+
+      - name: STORE_SALES
+        columns:
+          - name: SS_SOLD_DATE_TIME
+
+      - name: WAREHOUSE
+        columns:
+          - name: W_WAREHOUSE_ID

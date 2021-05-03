@@ -10,7 +10,7 @@ with date_dim as (
     {% if is_incremental() %}
 
     -- this filter will only be applied on an incremental run
-    where LAST_LOAD_TS > (select max(LAST_LOAD_TS) from {{ this }})
+    where LOAD_TS > (select max(LOAD_TS) from {{ this }})
 
     {% endif %}
 )

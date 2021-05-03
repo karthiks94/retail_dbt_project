@@ -36,7 +36,10 @@ models:
     marts:
         core:
             +materialized: incremental
+            +schema: core
         summary:
             +materialized: table
+            +schema: summary
     staging:
         +materialized: view
+        +schema: staging

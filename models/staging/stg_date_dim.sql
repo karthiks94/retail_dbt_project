@@ -8,10 +8,11 @@
 
 with date_dim as (
 
-        SELECT {{ dbt_utils.surrogate_key(primary_key_cols_list) }} as {{ surrogate_key_col_name }},
+        SELECT 
+        {{ get_date_surrogate_key('D_DATE') }} as {{ surrogate_key_col_name }},
+        -- REPLACE(D_DATE, '-', '') as {{ surrogate_key_col_name }},
                 *,
-                MD5 ({{ md5_construct }}) as MD5_HASH,
-                CURRENT_TIMESTAMP as LAST_LOAD_TS 
+                MD5 ({{ md5_construct }}) as MD5_HASH
         FROM {{ source(schema_name, table_name) }}
 
 )
